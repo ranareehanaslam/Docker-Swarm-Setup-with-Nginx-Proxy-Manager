@@ -1,4 +1,3 @@
-```markdown
 # Docker Swarm Setup with Nginx Proxy Manager 🚀
 
 This guide provides step-by-step instructions on how to deploy Nginx Proxy Manager in a Docker Swarm environment, ideal for managing proxies with a simple web interface.
