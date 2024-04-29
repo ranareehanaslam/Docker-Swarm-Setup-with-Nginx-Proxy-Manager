@@ -34,14 +34,14 @@ services:
       DB_MYSQL_HOST: "db"
       DB_MYSQL_PORT: 3306
       DB_MYSQL_USER: "npm"
-      DB_MYSQL_PASSWORD: "<yourpassword>"
+      DB_MYSQL_PASSWORD: "StrongPassword@2024"
       DB_MYSQL_NAME: "npm"
     volumes:
       - npm_data:/data
       - npm_letsencrypt:/etc/letsencrypt
     networks:
       - npm-db
-      - ingress
+      - nginx_ingress
 
   db:
     image: 'jc21/mariadb-aria:latest'
@@ -50,7 +50,7 @@ services:
       MYSQL_ROOT_PASSWORD: 'npm'
       MYSQL_DATABASE: 'npm'
       MYSQL_USER: 'npm'
-      MYSQL_PASSWORD: '<same password you used above>'
+      MYSQL_PASSWORD: 'StrongPassword@2024'
     volumes:
       - npm_db_data:/var/lib/mysql
     networks:
@@ -68,9 +68,10 @@ networks:
   npm-db:
     name: npm-db
     attachable: true
-  ingress:
-    name: ingress
+  nginx_ingress:
+    name: nginx_ingress
     attachable: true
+
 ```
 
 ## 🌐 Step 3: Deploy Your Stack
