@@ -1,5 +1,3 @@
-Here's a beautifully structured `README.md` for setting up Docker Swarm with Nginx Proxy Manager, including icons for a more engaging presentation:
-
 ```markdown
 # Docker Swarm Setup with Nginx Proxy Manager 🚀
 
