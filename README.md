@@ -14,6 +14,7 @@ Initialize Docker Swarm mode on your manager node using your public IP address:
 
 ```bash
 docker swarm init --advertise-addr public-ip
+```
 
 ## 🛠 Step 2: Create Docker Compose File
 
